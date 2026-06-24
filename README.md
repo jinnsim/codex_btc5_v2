@@ -72,6 +72,38 @@ order executor in this package, and `LIVE_TRADING_ENABLED=true` fails at startup
 확인한 뒤 라이브로 전환했다. 단, **이 repo의 코드는 여전히 paper-only**이며
 라이브 실행기는 포함하지 않는다.
 
+## 대시보드 (선택)
+
+수익률·거래 내역·시작/중지를 한눈에 보고 싶다면 대시보드를 붙이면 된다.
+이 repo에는 대시보드 코드가 포함돼 있지 않지만, 아래처럼 만들면 된다.
+
+**데스크톱 (Flask + HTML)**
+
+![데스크톱 대시보드](docs/images/dashboard-desktop.png)
+
+자산/ROI 차트, 승·패·손절 통계, 최근 거래 표, 시작/중지 버튼.
+
+**모바일 (iPhone / Android)**
+
+![모바일 대시보드](docs/images/dashboard-mobile.png)
+
+여러 봇(`codex_btc5_v2`, `codex_btc5_v2_live` 등)을 카드로 한 화면에서 비교.
+
+### 직접 만드는 법 — AI에게 시키면 된다
+
+대시보드는 **원하는 형태대로 AI(예: Claude/Codex)에게 만들어 달라고 하면 된다.**
+요청 한 줄이면 충분하다. 상황별로:
+
+- **내 컴퓨터에서만 볼 거다** → "이 봇 원장(`data/paper_ledger.sqlite3`)을 읽어서
+  자산/ROI/거래내역 보여주는 **Flask + HTML 대시보드** 만들어줘" 라고 시키면 된다.
+- **그게 뭔지도 잘 모르겠다** → 그냥 **"이 봇 대시보드 만들어줘"** 라고만 시켜도
+  된다. AI가 알아서 적당한 형태로 만들어 준다.
+- **폰에서도 보고 싶다** → "이 대시보드를 **iPhone / Android 용**으로도 만들어줘"
+  라고 추가로 시키면 된다.
+
+> 위 화면은 예시일 뿐이며, 레이아웃·지표·디자인은 원하는 대로 바꿔 달라고
+> 하면 된다.
+
 ## Requirements
 
 - Python 3.10+

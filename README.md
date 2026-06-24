@@ -1,5 +1,30 @@
 # codex_btc5_v2
 
+> ## ⚠️ 면책 · 먼저 읽어주세요
+>
+> **이 저장소는 투자 권유나 투자 조언이 아니다.** 코드·수치·기록은 모두
+> 개인 실험 기록일 뿐이며, 어떤 수익도 보장하지 않는다. 모든 판단과 책임은
+> 본인에게 있다.
+>
+> **Polymarket이 무엇인지 먼저 직접 찾아보고 충분히 이해한 다음** 진행하길
+> 바란다. 예측시장의 구조, 정산 방식, 수수료, 그리고 거주 지역의 법적·규제
+> 상황을 스스로 확인해야 한다.
+>
+> **입·출금은 실제 금전이 오간다.** 개인별 거래소·지갑·네트워크 환경이 모두
+> 다르므로, 입출금 경로 역시 **스스로 찾아보고 이해한 뒤** 진행하길 바란다.
+> 잘못된 네트워크/주소로 보내면 자금을 영구히 잃을 수 있다.
+> (참고로 작성자는 **빗썸 BTC → Polymarket 입금**, **Polymarket ETH → 빗썸 ETH**
+> 를 **이더리움 네트워크**로 입·출금했다. 이는 단순 참고용이며 권장 경로가 아니다.)
+>
+> **이 저장소의 코드는 페이퍼(모의) 모드 전용이다.** 실제 주문을 내는 라이브
+> 실행기는 포함되어 있지 않다. 라이브로 돌리고 싶다면 AI(예: Claude/Codex)에게
+> "라이브 모드를 적용해달라"고 요청해 실행기를 붙이고, 필요한 키값
+> (Polymarket/CLOB API 키, 지갑 프라이빗 키 등)을 직접 발급받아 사용하면 된다.
+> 이 경우 실제 자금이 오가므로 전적으로 본인 책임이다.
+>
+> 실시간 알림을 받고 싶다면 텔레그램을 설치하고 봇을 간단히 하나 만들면 된다
+> (BotFather로 토큰 발급 → 아래 [Configuration](#configuration) 참조).
+
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/downloads/)
 [![Mode: paper-only](https://img.shields.io/badge/mode-paper--only-orange.svg)](#)
 [![Tests: pytest](https://img.shields.io/badge/tests-pytest-green.svg)](#test)

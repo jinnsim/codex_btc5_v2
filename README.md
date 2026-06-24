@@ -79,13 +79,15 @@ order executor in this package, and `LIVE_TRADING_ENABLED=true` fails at startup
 
 **데스크톱 (Flask + HTML)**
 
-![데스크톱 대시보드](docs/images/dashboard-desktop.png)
+<img src="https://raw.githubusercontent.com/jinnsim/codex_btc5_v2/main/docs/images/dashboard-desktop.png" alt="데스크톱 대시보드" width="100%">
+
 
 자산/ROI 차트, 승·패·손절 통계, 최근 거래 표, 시작/중지 버튼.
 
 **모바일 (iPhone / Android)**
 
-![모바일 대시보드](docs/images/dashboard-mobile.png)
+<img src="https://raw.githubusercontent.com/jinnsim/codex_btc5_v2/main/docs/images/dashboard-mobile.png" alt="모바일 대시보드" width="320">
+
 
 여러 봇(`codex_btc5_v2`, `codex_btc5_v2_live` 등)을 카드로 한 화면에서 비교.
 

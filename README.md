@@ -109,15 +109,27 @@ order executor in this package, and `LIVE_TRADING_ENABLED=true` fails at startup
 ## Requirements
 
 - Python 3.10+
-- macOS / Linux (uses `bash` helper scripts for the supervisor loop)
+- **Windows · macOS · Linux 모두 동작** — 봇 본체는 순수 Python이라 OS를 가리지 않는다.
+  - `run_forever.sh` / `stop.sh` 헬퍼만 bash(macOS/Linux)용이다. Windows에서는
+    아래 [Run](#run)의 `python -m codex_btc5_v2 run` 명령을 직접 쓰거나, 같은
+    동작을 하는 `.bat`/PowerShell 스크립트를 AI에게 만들어 달라고 하면 된다.
 
 ## Setup
+
+대부분의 단계는 공통이고, 가상환경 활성화 명령만 OS별로 다르다.
 
 ```bash
 git clone https://github.com/jinnsim/codex_btc5_v2.git
 cd codex_btc5_v2
-python3 -m venv .venv
+python -m venv .venv
+
+# macOS / Linux
 source .venv/bin/activate
+# Windows (PowerShell)
+# .venv\Scripts\Activate.ps1
+# Windows (cmd)
+# .venv\Scripts\activate.bat
+
 pip install -r requirements.txt
 ```
 
@@ -145,12 +157,19 @@ python -m codex_btc5_v2 paper-once  # run a single paper-trading round
 python -m codex_btc5_v2 run         # run the continuous loop
 ```
 
-To keep the loop running with auto-restart (logs to `logs/run.log`):
+위 명령은 OS와 무관하게 동작한다.
+
+자동 재시작 supervisor를 쓰려면 (로그: `logs/run.log`):
 
 ```bash
+# macOS / Linux
 ./run_forever.sh   # supervisor loop
 ./stop.sh          # stop the loop
 ```
+
+Windows에는 이 `.sh` 스크립트가 동작하지 않는다. `python -m codex_btc5_v2 run`을
+직접 실행하거나, 같은 역할(무한 재시작·로그 기록)의 `.bat`/PowerShell 스크립트를
+AI에게 만들어 달라고 하면 된다.
 
 The imported sample state lives in `data/paper_ledger.sqlite3` and
 `data/evaluations.sqlite3` (both git-ignored). The original handoff documents

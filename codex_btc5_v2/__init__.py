@@ -1,0 +1,2 @@
+"""Standalone BTC indicator telemetry."""
+

@@ -1,0 +1,3 @@
+- [BTC5 Quant Lab goal](btc5-quant-lab-goal.md) — shadow lab now, live trading bot is the end goal, validation gate first
+- [Combined 5m+15m bot](combined-5m15m-bot.md) — claude__btc_5_15: merged bot, one shared bankroll, one Telegram bot
+- [Live accounting bug](live-accounting-bug.md) — codex_btc15_live reports $115 but real wallet $139.70; stop booked before sell confirm, failed sells never reconciled; gate paused

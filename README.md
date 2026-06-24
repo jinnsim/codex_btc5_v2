@@ -4,10 +4,21 @@
 [![Mode: paper-only](https://img.shields.io/badge/mode-paper--only-orange.svg)](#)
 [![Tests: pytest](https://img.shields.io/badge/tests-pytest-green.svg)](#test)
 [![Last commit](https://img.shields.io/github/last-commit/jinnsim/codex_btc5_v2.svg)](https://github.com/jinnsim/codex_btc5_v2/commits/main)
+[![Polymarket profile](https://img.shields.io/badge/Polymarket-live%20profile-6A5CFF.svg)](https://polymarket.com/ko/@0x257ae8cb4d7eea2eae996018597c42f587a65d9b-1781352180890)
 
 BTC 5-minute Up/Down paper bot for Polymarket. This project was reconstructed
 from `handoff_codex_btc5_v2` and is intentionally **paper-only**: there is no live
 order executor in this package, and `LIVE_TRADING_ENABLED=true` fails at startup.
+
+## Live wallet / profile
+
+이 봇이 추적하는 전략의 실제 Polymarket 활동은 아래 공개 프로필에서 볼 수 있다:
+
+- **[Polymarket profile →](https://polymarket.com/ko/@0x257ae8cb4d7eea2eae996018597c42f587a65d9b-1781352180890)**
+- Wallet: `0x257ae8cb4d7eea2eae996018597c42f587a65d9b`
+
+> 이 패키지 자체는 paper-only다. 위 프로필은 별도의 라이브 지갑이며 이 코드가
+> 자동으로 주문을 내지 않는다.
 
 ## Requirements
 
